@@ -17,6 +17,7 @@ export const styles = StyleSheet.create({
   buttonText: {
     color: "#001848",
     fontWeight: "bold",
+    fontSize: 20
   },
 
   sectionTitle: {
@@ -50,5 +51,11 @@ export const styles = StyleSheet.create({
   socialText: {
     color: "#FFF",
     fontWeight: "bold",
+  },
+
+  socialContent: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
   },
 });

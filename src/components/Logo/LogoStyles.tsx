@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     marginTop: 50,
   },
   text: {
-    fontSize: 36,
+    fontSize: 25,
     marginRight: 5,
     color: "#FFF"
   },
