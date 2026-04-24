@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
   text: {
     fontSize: 36,
     marginRight: 5,
+    color: "#FFF"
   },
   imageSize: {
     width: 50,
