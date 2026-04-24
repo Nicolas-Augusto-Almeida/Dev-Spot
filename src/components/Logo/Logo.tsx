@@ -6,8 +6,14 @@ import Sparkle from "../../assets/Sparkle.png";
 export function Logo() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>DEV.SPOT</Text>
-      <Image source={Sparkle} style={styles.imageSize} />
+      <View style={{ flexDirection: "row", alignItems: "center" }}>
+        <Text style={styles.text}>DEV.SPOT</Text>
+        <Image source={Sparkle} style={styles.imageSize} />
+      </View>
+      <Image
+        source={require("../../assets/Capa.png")}
+        style={styles.capaSize}
+      />
     </View>
   );
 }

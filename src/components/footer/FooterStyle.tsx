@@ -22,7 +22,7 @@ export default StyleSheet.create({
   },
   footerText: {
     color: "white",
-    fontSize: 18,
+    fontSize: 12,
     textAlign: 'center'
   },
 });
