@@ -5,22 +5,21 @@ export const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 50,
   },
   text: {
     fontSize: 25,
     marginRight: 5,
-    color: "#FFF"
+    color: "#FFF",
   },
   imageSize: {
     width: 50,
     height: 50,
   },
-  capaSize:{
+  capaSize: {
     width: 230,
     height: 270,
     marginTop: 45,
     alignContent: "center",
-    borderRadius: 5
-  }
+    borderRadius: 5,
+  },
 });

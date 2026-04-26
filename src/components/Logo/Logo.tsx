@@ -16,9 +16,7 @@ export function Logo() {
   return (
     <View style={styles.container}>
       <View style={{ flexDirection: "row", alignItems: "center" }}>
-        <Text style={[styles.text, { color: colors.text }]}>
-          DEV.SPOT
-        </Text>
+        <Text style={[styles.text, { color: colors.text }]}>DEV.SPOT</Text>
         <Image source={Sparkle} style={styles.imageSize} />
       </View>
 

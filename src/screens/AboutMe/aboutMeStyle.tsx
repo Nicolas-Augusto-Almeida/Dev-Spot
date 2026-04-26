@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
   },
 
   text: {
-    color: "#C7D2FE", 
+    color: "#C7D2FE",
     fontSize: 16,
     lineHeight: 24,
     textAlign: "justify",
