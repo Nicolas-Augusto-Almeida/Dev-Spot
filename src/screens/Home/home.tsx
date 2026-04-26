@@ -1,11 +1,18 @@
 import React, { useContext } from "react";
-import { View, Text, TouchableOpacity, Linking, Switch, ScrollView, } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Linking,
+  Switch,
+  ScrollView,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { ThemeContext } from "../context/ThemeContext";
+import { ThemeContext } from "../../context/ThemeContext";
 import { Alert } from "react-native";
-import { Logo } from "../components/Logo/Logo";
-import { NewText } from "../components/Text/NewText";
+import { Logo } from "../../components/Logo/Logo";
+import { NewText } from "../../components/Text/NewText";
 import { styles } from "./HomeStyle";
 import { FontAwesome, FontAwesome5 } from "@expo/vector-icons";
 
@@ -14,10 +21,7 @@ type RootStackParamList = {
   AboutMe: undefined;
 };
 
-type NavigationProps = NativeStackNavigationProp<
-  RootStackParamList,
-  "Home"
->;
+type NavigationProps = NativeStackNavigationProp<RootStackParamList, "Home">;
 
 const Home = () => {
   const navigation = useNavigation<NavigationProps>();
@@ -50,14 +54,14 @@ const Home = () => {
           </Text>
         </TouchableOpacity>
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => Alert.alert("Entre em contato")}
-      >
-      <Text style={[styles.buttonText, { color: colors.buttonText }]}>
-        Entre em contato!
-      </Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => Alert.alert("Entre em contato")}
+        >
+          <Text style={[styles.buttonText, { color: colors.buttonText }]}>
+            Entre em contato!
+          </Text>
+        </TouchableOpacity>
 
         <Text style={[styles.sectionTitle, { color: colors.text }]}>
           Acesse minhas redes:

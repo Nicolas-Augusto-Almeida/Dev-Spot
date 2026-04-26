@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { View, Text, ScrollView } from "react-native";
 
-import { Logo } from "../components/Logo/Logo";
+import { Logo } from "../../components/Logo/Logo";
 import { styles } from "./aboutMeStyle";
-import { ThemeContext } from "../context/ThemeContext";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const AboutMe = () => {
   const { theme } = useContext(ThemeContext);
@@ -22,9 +22,7 @@ const AboutMe = () => {
       <View style={styles.container}>
         <Logo />
 
-        <Text style={[styles.title, { color: colors.text }]}>
-          Sobre mim
-        </Text>
+        <Text style={[styles.title, { color: colors.text }]}>Sobre mim</Text>
 
         <View
           style={[
@@ -36,30 +34,19 @@ const AboutMe = () => {
           ]}
         >
           <Text style={[styles.text, { color: colors.secondary }]}>
-            Cheguei no código, bug querendo mandar,
-            tela branca piscando, difícil de encarar,
-            mas quando o Melky cola, já muda o lugar,
+            Cheguei no código, bug querendo mandar, tela branca piscando,
+            difícil de encarar, mas quando o Melky cola, já muda o lugar,
             transforma erro em solução, faz tudo funcionar.
-
+            {"\n\n"}É stack na mente, lógica no olhar, explica de um jeito que
+            dá pra acompanhar, se trava na função, ele vem destravar, tipo debug
+            humano pronto pra salvar.
             {"\n\n"}
-
-            É stack na mente, lógica no olhar,
-            explica de um jeito que dá pra acompanhar,
-            se trava na função, ele vem destravar,
-            tipo debug humano pronto pra salvar.
-
+            Não é só teoria, é prática na missão, cada aula é upgrade na
+            programação, sai do “não entendi” pra “peguei a visão”, com o Melky
+            no comando, evolução na mão.
             {"\n\n"}
-
-            Não é só teoria, é prática na missão,
-            cada aula é upgrade na programação,
-            sai do “não entendi” pra “peguei a visão”,
-            com o Melky no comando, evolução na mão.
-
-            {"\n\n"}
-
-            Então respeita o nome, segura essa track,
-            professor de código com flow de full stack,
-            se o sistema cai, ele traz de volta no hack,
+            Então respeita o nome, segura essa track, professor de código com
+            flow de full stack, se o sistema cai, ele traz de volta no hack,
             Melky é brabo — não tem rollback.
           </Text>
         </View>

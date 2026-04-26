@@ -4,8 +4,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { ThemeProvider, ThemeContext } from "./src/context/ThemeContext";
 import { useContext } from "react";
 
-import Home from "./src/screens/home";
-import AboutMe from "./src/screens/aboutMe";
+import Home from "./src/screens/Home/home";
+import AboutMe from "./src/screens/AboutMe/aboutMe";
 import Footer from "./src/components/footer/Footer";
 
 const Stack = createNativeStackNavigator();
