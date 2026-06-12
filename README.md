@@ -53,3 +53,13 @@ npx expo start --clear
 - TypeScript
 - React Navigation
 - GitHub REST API v3
+
+## API Utilizada
+
+GitHub REST API v3
+
+Documentação Oficial:
+
+https://docs.github.com/pt/rest
+
+## ** Projeto desenvolvido em ambiente de teste Expo Web **
