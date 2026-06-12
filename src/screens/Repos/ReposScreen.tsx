@@ -45,6 +45,7 @@ function reposReducer(state: State, action: Action): State {
 type NavigationProps = NativeStackNavigationProp<RootStackParamList, "Repos">;
 
 const GITHUB_USERNAME = "torvalds";
+const GITHUB_TOKEN = "ghp_SEU_NOVO_TOKEN_AQUI"; // ← novo token aqui
 
 const ReposScreen = () => {
   const navigation = useNavigation<NavigationProps>();
@@ -53,15 +54,17 @@ const ReposScreen = () => {
 
   const [state, dispatch] = useReducer(reposReducer, initialState);
 
-  useEffect(() => {
-    fetchRepos();
-  }, []);
-
   const fetchRepos = async () => {
     dispatch({ type: "FETCH_START" });
     try {
       const response = await fetch(
-        `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=20`
+        `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=20`,
+        {
+          headers: {
+            Authorization: `Bearer ${GITHUB_TOKEN}`,
+            Accept: "application/vnd.github+json",
+          },
+        }
       );
       if (!response.ok) {
         throw new Error(`Erro HTTP: ${response.status}`);
@@ -75,6 +78,10 @@ const ReposScreen = () => {
       });
     }
   };
+
+  useEffect(() => {
+    fetchRepos();
+  }, []);
 
   const colors = {
     bg: isDark ? "#001848" : "#F3F4F6",
