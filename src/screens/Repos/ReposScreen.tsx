@@ -45,7 +45,7 @@ function reposReducer(state: State, action: Action): State {
 type NavigationProps = NativeStackNavigationProp<RootStackParamList, "Repos">;
 
 const GITHUB_USERNAME = "torvalds";
-const GITHUB_TOKEN = "ghp_SEU_NOVO_TOKEN_AQUI"; // ← novo token aqui
+const GITHUB_TOKEN = process.env.EXPO_PUBLIC_GITHUB_TOKEN ?? "";
 
 const ReposScreen = () => {
   const navigation = useNavigation<NavigationProps>();
